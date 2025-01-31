@@ -1,49 +1,53 @@
 {
-  "name": "infinety/audit-logger",
-  "description": "A Laravel package for real-time audit trails with replay functionality",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
+    "name": "infinety/audit-logger",
+    "description": "A Laravel package for real-time audit trails with replay functionality",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
     {
-      "name": "Infinety",
-      "email": "infinetydev@gmail.com"
+        "name": "Infinety",
+        "email": "infinetydev@gmail.com"
     }
-  ],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-        "php": "^8.0",
-        "illuminate/support": "^9.0|^10.0"
-  },
-  "require-dev": {
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
         "laravel/pint": "^1.0",
         "orchestra/testbench": "^8.31",
         "phpunit/phpunit": "^9.4|^10.1|^11.5",
         "pestphp/pest": "^1.0"
     },
-  "autoload": {
-    "psr-4": {
-      "infinety\\AuditLogger\\": "src/"
-    }
-  },
-  "autoload-dev": {
+    "autoload": {
+        "psr-4": {
+            "infinety\\AuditLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
         "psr-4": {
             "infinety\\AuditLogger\\Tests\\": "tests"
         }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "infinety\\AuditLogger\\AuditServiceProvider"
-      ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev",
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+            "infinety\\AuditLogger\\AuditServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
-  },
-  "scripts": {
-    "test": "pest"
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  }
 }

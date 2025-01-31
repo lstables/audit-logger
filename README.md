@@ -15,4 +15,4 @@ A Laravel package for real-time audit trails with replay functionality. Easily l
 Require this package via Composer:
 
 ```bash
-composer require infinety\audit-logger
+composer require infinety/audit-logger
